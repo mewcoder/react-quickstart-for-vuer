@@ -1,6 +1,8 @@
 # vue-to-react
 写给 vue 使用者的 react 的上手指南
 
+## JSX
+- [渲染函数 & JSX](https://cn.vuejs.org/guide/extras/render-function.html#render-functions-jsx)
 
 
 ## Composition API 和 React Hooks
