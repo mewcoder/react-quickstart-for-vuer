@@ -225,7 +225,7 @@ Hooks 只能在函数组件中使用，且只能在组件函数的最顶层调�
   //    state变量  state更新函数           state初始值
 ```
 
-## useEffect
+### useEffect
 
 > 副作用就是让一个函数不再是纯函数的各类操作，比如请求数据，DOM操作等
 
@@ -252,7 +252,7 @@ useEffect(() => {/* 省略 */; return () => {/* 省略 */};}, [status]);
 
   
 
-## useRef
+### useRef
 
 用于保存DOM或任意数据，在下一次渲染中，`useRef`将返回相同的对象。
 
