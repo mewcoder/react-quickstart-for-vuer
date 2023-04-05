@@ -30,7 +30,11 @@ function Greeting(props) {
 }
 ```
 
-函数组件相比较类组件，更轻量与灵活，便于逻辑的拆分复用。
+函数组件相比较类组件，依靠Hooks：
+
+- 更简洁
+- 便于逻辑的拆分复用
+- 没有 this 指向不明问题
 
 ### 2.2 Vue
 
@@ -264,12 +268,14 @@ const add2 = () => {
 
 >  React 的强调的是数据不可变(immutable)，而 Vue 核心是响应式(数据可变)
 
-### 3.2 useEffect
+### 3.2 useEffect&useLayoutEffect
 
 > 副作用就是让一个函数不再是纯函数的各类操作，比如请求数据，DOM操作等
 
 - 可用于模拟类组件中的生命周期钩子
 - 副作用执行
+
+**useEffect**
 
 ```jsx
 useEffect(() => {/* 省略 */; return () => {/* 省略 */};}, [status]);
@@ -291,7 +297,15 @@ useEffect(() => {/* 省略 */; return () => {/* 省略 */};}, [status]);
 
 >Vue 中 watchEffect 会自动追踪依赖，且首次会执行。
 
-### 3.3 useContext
+**useLayoutEffect**
+
+使用方法和 useEffect 相同，但它会在所有DOM变更之后**同步**调用回调函数，和 componentDidMount 时机相同
+
+而 useEffect 的回调函数会在组件渲染到屏幕之后**延迟**执行。
+
+
+
+### 3.3 useContext 
 
 > 类似 Vue 中的 provide 和 inject
 
@@ -415,7 +429,7 @@ const MyInput = forwardRef(function MyInput(props, ref) {
 });
 ```
 
-
+> Imperative: 必要
 
 ### 3.5 useCallback&useMemo
 
@@ -496,3 +510,20 @@ function Counter() {
 }
 ```
 
+
+
+## 4. Diff
+
+> [Why remove time slicing from vue3?](https://github.com/vuejs/rfcs/issues/89#top)
+>
+> 总结就是：Vue由于响应式和编译优化，性能已经足够好，引入 Fiber 会增加复杂度，收益没有那么明显。
+
+
+
+
+
+
+
+## 其他
+
+https://juejin.cn/post/7195486276936532028
