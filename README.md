@@ -1,4 +1,4 @@
-# 写给 vuer 的 react 的快速上手
+# 写给 vuer 的 react 的快速上手指南
 > 主要对比 Vue3+ 和 React16.8+
 
 > 多看文档！！！
