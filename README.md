@@ -66,7 +66,7 @@ export default {
 > 注意 Composition API 只是一种风格，通过 setup 选项/或者 `<script setup>` 语法糖定义；两种 API 风格都是基于同一个底层系统；
 >
 > - Vue3 中选项式 API 是在组合式 API 的基础上实现的👉 [applyOptions](https://github.com/vuejs/core/blob/main/packages/runtime-core/src/componentOptions.ts#L608)。
-> - Vue2.7 也支持了 Composition API，👉[V3](https://github.com/vuejs/vue/blob/main/src/v3/index.ts)，使用上有一些[限制](https://blog.vuejs.org/posts/vue-2-7-naruto)。
+> - Vue2.7 也支持了 Composition API，👉[src/V3](https://github.com/vuejs/vue/blob/main/src/v3/index.ts)，使用上有一些[限制](https://blog.vuejs.org/posts/vue-2-7-naruto)。
 
 ```vue
 <script setup>
@@ -158,7 +158,7 @@ return <ul>{listItems}</ul>;
 return <button onClick={handleClick}>Click me</button>;
 ```
 
-6. 返回多个标签
+6. 组件返回多个元素,`React.Fragment`的语法糖，vue2不支持，vue3支持
 
 ```jsx
   return (
@@ -173,7 +173,7 @@ return <button onClick={handleClick}>Click me</button>;
 
 ### 2.2 渲染函数
 
-React 和 Vue 都是基于 虚拟DOM设计的，JSX 或 template 都会编译成 render 函数，返回 VNode
+React 和 Vue 都是基于虚拟DOM设计的，JSX 或 template 都会编译成 render 函数，返回 VNode
 
 JSX 这种属于声明式，而直接使用createElement 属于编程式。
 
@@ -217,7 +217,7 @@ import { h, ref } from 'vue'
 export default {
   setup() {
     const count = ref(0)
-    // setup 也可以返回一个渲染函数，或者通过render选项定义
+    // setup 可以直接返回一个渲染函数，或者通过render选项定义
     return () => h('div', count.value)
   }
 }
@@ -245,8 +245,8 @@ Hooks 只能在函数组件中使用，且只能在组件函数的最顶层（�
   //    state变量  state setter函数        state初始值
 ```
 
-- setter函数的功能，更新 state 变量并触发 React 重新渲染组件。每次更新 state 都会重新生成一份快照，函数(组件)会根据新的 state 生成新的 JSX(VNode)，然后更新视图。
-- setter函数分两种情况：
+- setter 函数的功能，更新 state 变量并触发 React 重新渲染组件。每次更新 state 都会重新生成一份快照，函数(组件)会根据新的 state 生成新的 VNode，然后更新视图。
+- setter 函数分两种情况：
 
 ```jsx
 const [count, setCount] = useState(0);
