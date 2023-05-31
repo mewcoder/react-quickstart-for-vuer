@@ -24,6 +24,12 @@ export default defineConfig({
       //   ],
       // },
     ],
+    socialLinks: [
+      {
+        icon: "github",
+        link: "https://github.com/mewcoder/vue-to-react-guide",
+      },
+    ],
     sidebar: {
       "/": [
         {
