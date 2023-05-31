@@ -4,6 +4,7 @@ export default defineConfig({
   lang: "zh-CN",
   title: "Vue to React Guide",
   description: "Vue 转 React一站式学习指南",
+  base: "/vue-to-react-guide/",
   themeConfig: {
     nav: [
       // {
