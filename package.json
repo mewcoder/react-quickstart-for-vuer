@@ -1,0 +1,25 @@
+{
+  "name": "vue-to-react-guide",
+  "version": "1.0.0",
+  "description": "Vue 转 React：一站式学习指南",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mewcoder/vue-to-react-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mewcoder/vue-to-react-guide/issues"
+  },
+  "homepage": "https://github.com/mewcoder/vue-to-react-guide#readme",
+  "dependencies": {
+    "vitepress": "1.0.0-beta.1"
+  }
+}
