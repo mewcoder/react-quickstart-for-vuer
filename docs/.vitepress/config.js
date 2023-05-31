@@ -6,24 +6,7 @@ export default defineConfig({
   description: "Vue 转 React一站式学习指南",
   base: "/vue-to-react-guide/",
   themeConfig: {
-    nav: [
-      // {
-      //   text: "基础",
-      //   items: [
-      //     { text: "JavaScript", link: "/one/js" },
-      //     { text: "CSS", link: "/one/css" },
-      //     { text: "浏览器", link: "/one/browser" },
-      //   ],
-      // },
-      // {
-      //   text: "综合",
-      //   items: [
-      //     { text: "vue", link: "/two/vue" },
-      //     { text: "webpack", link: "/two/webpack" },
-      //     { text: "其他", link: "/two/other" },
-      //   ],
-      // },
-    ],
+    nav: [],
     socialLinks: [
       {
         icon: "github",
@@ -33,7 +16,7 @@ export default defineConfig({
     sidebar: {
       "/": [
         {
-          title: "引导",
+          title: "第一章",
           collapsible: false,
           items: [
             { text: "1", link: "/1" },
